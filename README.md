@@ -10,12 +10,9 @@ sessions, and handles document downloads (DOCX/PDF) natively.
 1. **Install Flutter**
 2. Open a terminal in this folder and run:
 3. Point the app at your Flask server. Edit **`lib/config.dart`**:
-   - `10.0.2.2:5000` → Flask running on your computer, viewed from the Android **emulator**.
-   - `http://192.168.x.x:5000` → Flask on your computer, viewed from a **physical phone** on the same Wi-Fi.
-     Find your LAN IP with `ipconfig` (Windows) or `ifconfig` (Mac/Linux).
-   - `https://your-deployed-domain.com` → Production.
 
-   > For the phone to reach Flask on your laptop, run Flask with
+   For the phone to reach Flask on your laptop, run Flask with
+
    > `flask --app run.py run --host=0.0.0.0 --port=5000`.
 
 ## Run on an emulator / device
@@ -31,10 +28,8 @@ flutter build apk --release
 ```
 
 The APK appears at `build/app/outputs/flutter-apk/app-release.apk`.
-Send it to your phone, tap to install (you may need to allow
-"Install from unknown sources").
 
-## What this app does for you
+## What this app does
 
 - Loads the TTU Mate web app full-screen, no browser chrome
 - Persists login cookies (users stay signed in)
