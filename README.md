@@ -5,24 +5,11 @@ It is a real Android app (compiles to a real APK) that loads your hosted
 Flask site inside a full-screen WebView, keeps the user logged in across
 sessions, and handles document downloads (DOCX/PDF) natively.
 
-## Why a wrapper?
-
-You said you have a presentation tomorrow. Re-implementing every screen
-(auth, generators, Paystack, PDF rendering, file storage) natively in
-Flutter would take a week. A WebView wrapper gives you a 100% functional
-mobile app **today**, using the exact same backend the web app uses.
-
 ## One-time setup
 
-1. **Install Flutter** (3.16+): https://docs.flutter.dev/get-started/install
+1. **Install Flutter**
 2. Open a terminal in this folder and run:
-   ```bash
-   flutter pub get
-   ```
 3. Point the app at your Flask server. Edit **`lib/config.dart`**:
-   ```dart
-   static const String serverUrl = "http://10.0.2.2:5000";
-   ```
    - `10.0.2.2:5000` → Flask running on your computer, viewed from the Android **emulator**.
    - `http://192.168.x.x:5000` → Flask on your computer, viewed from a **physical phone** on the same Wi-Fi.
      Find your LAN IP with `ipconfig` (Windows) or `ifconfig` (Mac/Linux).
